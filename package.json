@@ -2,9 +2,10 @@
   "name": "event-bucket-throttle",
   "version": "1.0.0",
   "description": "A basic token bucket that throttles based on key. Not only does it have a total bucket size, but also contains \"child\" buckets to prevent a single event from overwhelming the bucket.",
-  "main": "dist/index.js",
+  "main": "dist/eventBucketThrottle.js",
   "scripts": {
-    "test": "npm run test"
+    "build": "tsc --declaration --lib es2015 --outDir dist/ src/eventBucketThrottle.ts",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,14 @@
   "bugs": {
     "url": "https://github.com/awslabs/aws-event-bucket-throttle/issues"
   },
-  "homepage": "https://github.com/awslabs/aws-event-bucket-throttle#readme"
+  "homepage": "https://github.com/awslabs/aws-event-bucket-throttle#readme",
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/node": "^12.0.4",
+    "jest": "^24.8.0",
+    "lodash": "^4.17.11",
+    "typescript": "^3.5.1"
+  }
 }
