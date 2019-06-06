@@ -18,9 +18,16 @@ const eventBucket = new EventTokenBucket({
 });
 
 if (eventBucket.take("page.click")) {
-    // Logic continues event bucket hasn't been exhausted
+    // Logic continues if event bucket hasn't been exhausted
 }
 ```
+
+## API
+### take(eventName: string)
+- Determines whether to throttle the event or not, based on the most up-to-date values of the TotalEventBucket and the bucket designated by the passed-in eventName. Decrements each bucket's open capacity accordingly if there is "space" for the event.
+- @param [string] eventName: the name of the event that has occurred
+- @returns [boolean] true if there is capacity for the event, false if there is not
+
 
 ## License Summary
 
