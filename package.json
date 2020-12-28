@@ -33,6 +33,6 @@
     "typescript": "^3.5.1"
   },
   "resolutions": {
-    "node-notifier": "^9.0.0",
+    "node-notifier": "^9.0.0"
   }
 }
