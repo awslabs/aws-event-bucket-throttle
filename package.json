@@ -29,6 +29,10 @@
     "@types/node": "^12.0.4",
     "jest": "^24.8.0",
     "lodash": "^4.17.19",
+    "node-notifier": "^9.0.0",
     "typescript": "^3.5.1"
+  },
+  "resolutions": {
+    "node-notifier": "^9.0.0",
   }
 }
